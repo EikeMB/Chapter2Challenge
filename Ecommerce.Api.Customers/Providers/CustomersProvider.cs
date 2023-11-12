@@ -11,6 +11,14 @@ using System.Threading.Tasks;
 
 namespace Ecommerce.Api.Customers.Providers
 {
+    /*
+* Course: 		Web Programming 3
+* Assessment: 	Milestone 3
+* Created by: 	Eike Morgado Bodecker - 2137571
+* Date: 		<12> <November> 2023
+* Class Name: 	CustomersProvider.cs
+* Description: 	Class that deals with the database and allows access to the data  
+  */
     public class CustomersProvider : ICustomersProvider
     {
 

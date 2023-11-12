@@ -11,6 +11,14 @@ using System.Threading.Tasks;
 
 namespace ECommerce.Api.Orders.Providers
 {
+    /*
+* Course: 		Web Programming 3
+* Assessment: 	Milestone 3
+* Created by: 	Eike Morgado Bodecker - 2137571
+* Date: 		<12> <November> 2023
+* Class Name: 	OrdersProvider.cs
+* Description: 	Class that deals with the database and allows access to the data  
+  */
     public class OrdersProvider : IOrdersProvider
     {
         private readonly OrdersDbContext dbContext;
