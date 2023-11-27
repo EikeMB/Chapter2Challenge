@@ -37,10 +37,10 @@ namespace ECommerce.Api.Orders.Providers
         {
             if (!dbContext.Orders.Any())
             {
-                dbContext.Orders.Add(new Db.Order() { Id = 1, CustomerId = 1, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>(), Total = 50 });
-                dbContext.Orders.Add(new Db.Order() { Id = 2, CustomerId = 1, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>(), Total = 50 });
-                dbContext.Orders.Add(new Db.Order() { Id = 3, CustomerId = 2, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>(), Total = 50 });
-                dbContext.Orders.Add(new Db.Order() { Id = 4, CustomerId = 3, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>(), Total = 50 });
+                dbContext.Orders.Add(new Db.Order() { Id = 1, CustomerId = 1, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>() { new Db.OrderItem() }, Total = 50 });
+                dbContext.Orders.Add(new Db.Order() { Id = 2, CustomerId = 1, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>() { new Db.OrderItem() }, Total = 50 });
+                dbContext.Orders.Add(new Db.Order() { Id = 3, CustomerId = 2, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>() { new Db.OrderItem() }, Total = 50 });
+                dbContext.Orders.Add(new Db.Order() { Id = 4, CustomerId = 3, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>() { new Db.OrderItem() }, Total = 50 });
                 dbContext.SaveChanges();
             }
         }
