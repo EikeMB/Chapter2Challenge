@@ -13,7 +13,7 @@ namespace ECommerce.Api.Search.Services
         private readonly IHttpClientFactory httpClientFactory;
         private readonly ILogger logger;
 
-        public CustomersService(IHttpClientFactory httpClientFactory, ILogger logger)
+        public CustomersService(IHttpClientFactory httpClientFactory, ILogger<CustomersService> logger)
         {
             this.httpClientFactory = httpClientFactory;
             this.logger = logger;

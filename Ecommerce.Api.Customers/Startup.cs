@@ -28,13 +28,16 @@ namespace Ecommerce.Api.Customers
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<ICustomersProvider, CustomersProvider>();
-            services.AddAutoMapper(typeof(Startup));
+            
 
             services.AddDbContext<CustomersDbContext>(options =>
             {
                 options.UseInMemoryDatabase("Customers");
             });
+
+            services.AddScoped<ICustomersProvider, CustomersProvider>();
+            services.AddAutoMapper(typeof(Startup));
+
             services.AddControllers();
         }
 
