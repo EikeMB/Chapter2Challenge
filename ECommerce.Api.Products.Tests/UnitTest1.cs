@@ -21,6 +21,7 @@ namespace ECommerce.Api.Products.Tests
 
             var dbContext = new ProductsDbContext(options);
 
+
             CreateProducts(dbContext);
 
             var productProfile = new ProductProfile();
@@ -89,6 +90,11 @@ namespace ECommerce.Api.Products.Tests
 
         private void CreateProducts(ProductsDbContext dbContext)
         {
+
+            foreach (var item in dbContext.Products)
+            {
+                dbContext.Remove(item);
+            }
             for (int i = 1; i <= 10; i++)
             {
                 dbContext.Products.Add(new Product()
