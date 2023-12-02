@@ -37,10 +37,30 @@ namespace ECommerce.Api.Orders.Providers
         {
             if (!dbContext.Orders.Any())
             {
-                dbContext.Orders.Add(new Db.Order() { Id = 1, CustomerId = 1, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>() { new Db.OrderItem() }, Total = 50 });
-                dbContext.Orders.Add(new Db.Order() { Id = 2, CustomerId = 1, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>() { new Db.OrderItem() }, Total = 50 });
-                dbContext.Orders.Add(new Db.Order() { Id = 3, CustomerId = 2, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>() { new Db.OrderItem() }, Total = 50 });
-                dbContext.Orders.Add(new Db.Order() { Id = 4, CustomerId = 3, OrderDate = DateTime.Now, orderItems = new List<Db.OrderItem>() { new Db.OrderItem() }, Total = 50 });
+                dbContext.Orders.Add(new Db.Order() { Id = 1, CustomerId = 1, OrderDate = DateTime.Now, Items = new List<Db.OrderItem>() { 
+                        new Db.OrderItem() { OrderId = 1, ProductId = 1, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 1, ProductId = 2, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 1, ProductId = 3, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 2, ProductId = 2, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 3, ProductId = 3, Quantity = 1, UnitPrice = 100 } }, Total = 100 });
+                dbContext.Orders.Add(new Db.Order() { Id = 2, CustomerId = 1, OrderDate = DateTime.Now, Items = new List<Db.OrderItem>() {
+                        new Db.OrderItem() { OrderId = 1, ProductId = 1, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 1, ProductId = 2, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 1, ProductId = 3, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 2, ProductId = 2, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 3, ProductId = 3, Quantity = 1, UnitPrice = 100 }  }, Total = 100 });
+                dbContext.Orders.Add(new Db.Order() { Id = 3, CustomerId = 2, OrderDate = DateTime.Now, Items = new List<Db.OrderItem>() {
+                        new Db.OrderItem() { OrderId = 1, ProductId = 1, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 1, ProductId = 2, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 1, ProductId = 3, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 2, ProductId = 2, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 3, ProductId = 3, Quantity = 1, UnitPrice = 100 } }, Total = 100 });
+                dbContext.Orders.Add(new Db.Order() { Id = 4, CustomerId = 3, OrderDate = DateTime.Now, Items = new List<Db.OrderItem>() {
+                        new Db.OrderItem() { OrderId = 1, ProductId = 1, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 1, ProductId = 2, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 1, ProductId = 3, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 2, ProductId = 2, Quantity = 10, UnitPrice = 10 },
+                        new Db.OrderItem() { OrderId = 3, ProductId = 3, Quantity = 1, UnitPrice = 100 } }, Total = 100 });
                 dbContext.SaveChanges();
             }
         }
