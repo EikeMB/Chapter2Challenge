@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECommerce.Api.Orders</name>
+    </assembly>
+    <members>
+        <member name="M:ECommerce.Api.Orders.Controllers.OrdersController.GetOrdersAsync(System.Int32)">
+            <summary>
+            Get orders specified by the customer Id.
+            </summary>
+            <returns>An IActionResult</returns>
+            <response code="200">Return the requested orders</response>
+            <remarks>
+            Sample request
+            
+            <code>
+            GET /orders/1
+            [
+               {
+                   "id": 1,
+                   "customerId": 1,
+                   "orderDate": "2023-12-16T19:08:06.3766461-05:00",
+                   "total": 100,
+                   "items": []
+               },
+               {
+                   "id": 2,
+                   "customerId": 1,
+                   "orderDate": "2023-12-16T19:08:06.4304803-05:00",
+                   "total": 100,
+                   "items": []
+               }
+            ]
+            </code>
+            </remarks>
+        </member>
+        <member name="M:ECommerce.Api.Orders.Controllers.OrdersController.GetOrdersAsync">
+             <summary>
+             Get all Orders.
+             </summary>
+             <returns>An IActionResult</returns>
+             <response code="200">Return the all orders</response>
+             <remarks>
+             
+             Sample request
+             <code>
+             GET /orders
+             [
+                {
+                    "id": 1,
+                    "customerId": 1,
+                    "orderDate": "2023-12-16T19:08:06.3766461-05:00",
+                    "total": 100,
+                    "items": []
+                },
+                {
+                    "id": 2,
+                    "customerId": 1,
+                    "orderDate": "2023-12-16T19:08:06.4304803-05:00",
+                    "total": 100,
+                    "items": []
+                },
+                {
+                "id": 3,
+                    "customerId": 2,
+                    "orderDate": "2023-12-16T19:08:06.4336822-05:00",
+                    "total": 100,
+                    "items": []
+                },
+                {
+                "id": 4,
+                    "customerId": 3,
+                    "orderDate": "2023-12-16T19:08:06.4339164-05:00",
+                    "total": 100,
+                    "items": []
+                }
+            ]
+             </code>
+             </remarks>
+        </member>
+    </members>
+</doc>

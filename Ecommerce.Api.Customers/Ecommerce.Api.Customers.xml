@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecommerce.Api.Customers</name>
+    </assembly>
+    <members>
+        <member name="M:Ecommerce.Api.Customers.Controllers.CustomersController.GetCustomersAsync">
+            <summary>
+            Get all customers.
+            </summary>
+            <returns>An IActionResult</returns>
+            <response code="200">Return the all customers</response>
+            <remarks>
+            Sample request
+            <code>
+            
+            GET /customers/1
+            [
+               {
+                   "id": 1,
+                   "name": "Eike",
+                   "address": "somewhere else ave"
+               },
+               {
+                   "id": 2,
+                   "name": "Aly",
+                   "address": "Boonies"
+               },
+               {
+                   "id": 3,
+                   "name": "Yensan",
+                   "address": "something ave"
+               }
+            ]
+            </code>
+            </remarks>
+        </member>
+        <member name="M:Ecommerce.Api.Customers.Controllers.CustomersController.GetCustomerAsync(System.Int32)">
+            <summary>
+            Get customer by the provided Id.
+            </summary>
+            <returns>An IActionResult</returns>
+            <response code="200">Return the requested customer</response>
+            <remarks>
+            Sample request:
+            <code>
+            GET /customers
+                {
+                    "id": 1,
+                    "name": "Eike",
+                    "address": "somewhere else ave"
+                } 
+            </code>
+            </remarks>
+        </member>
+    </members>
+</doc>
